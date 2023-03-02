@@ -13,22 +13,13 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
 	binary_tree_t *tmp;
 
-	tmp = (binary_tree_t *)malloc(sizeof(binary_tree_t *));
+	tmp = (binary_tree_t *)malloc(sizeof(binary_tree_t));
 	if (!(tmp))
-		return NULL;
+		return (NULL);
 
 	tmp->n = value;
 	tmp->left = tmp->right = NULL;
-
-	if (parent == NULL)
-	{
-		tmp->parent = NULL;
-		printf("%d/n", tmp->n);
-		return tmp;
-	}
-	else
-	{
-		tmp->parent = parent;
-		return tmp;
-	}
+	/*printf("%d\n", tmp->n);*/
+	tmp->parent = parent;
+	return (tmp);
 }
