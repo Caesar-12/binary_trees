@@ -11,7 +11,7 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-	binary_tree_t *tmp, *trav;
+	binary_tree_t *tmp;
 
 	tmp = (binary_tree_t *)malloc(sizeof(binary_tree_t *));
 	if (!(tmp))
@@ -23,6 +23,7 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (parent == NULL)
 	{
 		tmp->parent = NULL;
+		printf("%d/n", tmp->n);
 		return tmp;
 	}
 	else
